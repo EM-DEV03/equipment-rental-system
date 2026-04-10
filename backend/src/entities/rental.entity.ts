@@ -30,13 +30,13 @@ export class Rental {
   @ManyToOne(() => User, { eager: true })
   user: User;
 
-  @Column('datetime')
+  @Column('timestamp')
   rentDate: Date;
 
   @Column('date')
   estimatedReturnDate: Date;
 
-  @Column('datetime', { nullable: true })
+  @Column('timestamp', { nullable: true })
   actualReturnDate: Date | null;
 
   @Column({ default: 'ACTIVE' })

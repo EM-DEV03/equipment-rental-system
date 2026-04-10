@@ -34,7 +34,7 @@ export class Payment {
   @Column({ nullable: true })
   notes: string;
 
-  @Column('datetime')
+  @Column('timestamp')
   paymentDate: Date;
 
   @CreateDateColumn()
