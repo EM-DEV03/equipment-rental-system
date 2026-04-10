@@ -1,4 +1,8 @@
-# Sistema MVP - Alquiler de Equipos de Construccion
+# equipment-rental-system
+
+Web platform for construction equipment rental, inventory control, customer management, returns, payments, and business operations.
+
+## Sistema MVP - Alquiler de Equipos de Construccion
 
 MVP web para controlar la operacion diaria de alquiler de equipos de construccion con foco en:
 
@@ -6,7 +10,7 @@ MVP web para controlar la operacion diaria de alquiler de equipos de construccio
 - clientes con historial
 - salidas con documento obligatorio
 - devoluciones obligatorias por numero de factura
-- cargos automaticos por mora, daños e incompletos
+- cargos automaticos por mora, danos e incompletos
 
 ## Arquitectura
 
@@ -22,7 +26,7 @@ MVP web para controlar la operacion diaria de alquiler de equipos de construccio
 - PDF generado automaticamente al crear una factura o recibo
 - Swagger disponible para documentacion de API
 
-### Modulos implementados
+## Modulos implementados
 - `auth`
 - `customers`
 - `equipment`
@@ -173,7 +177,7 @@ La preferencia queda guardada en el navegador y el boton de impresion cambia aut
 
 ## Seguridad aplicada
 
-- contraseñas con `bcrypt`
+- contrasenas con `bcrypt`
 - `helmet` para cabeceras HTTP
 - validacion global con `ValidationPipe`
 - JWT listo para autenticacion
@@ -203,7 +207,7 @@ Para subirlo y empezar a usarlo en web de forma seria, la recomendacion es:
 
 ### Variables recomendadas para backend
 
-Usa [backend/.env.example](c:/Users/Maria_Iriarte/Documents/EM_DATA/Arleys_Software/backend/.env.example) como base.
+Usa `backend/.env.example` como base.
 
 Variables claves:
 
@@ -219,7 +223,7 @@ Variables claves:
 
 ### Variables recomendadas para frontend
 
-Usa [frontend/.env.example](c:/Users/Maria_Iriarte/Documents/EM_DATA/Arleys_Software/frontend/.env.example):
+Usa `frontend/.env.example`:
 
 - `NEXT_PUBLIC_API_URL=https://tu-api.com/api`
 
