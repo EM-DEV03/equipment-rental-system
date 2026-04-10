@@ -107,4 +107,21 @@ export class EquipmentService {
 
     return savedEquipment;
   }
+
+  async delete(equipmentId: string) {
+    const equipment = await this.equipmentRepo.findOne({ where: { id: equipmentId } });
+    if (!equipment) {
+      throw new NotFoundException('Equipo no encontrado');
+    }
+
+    await this.activityLogService.log({
+      action: 'EQUIPMENT_DELETED',
+      entityName: 'equipment',
+      entityId: equipmentId,
+      actorName: equipment.name,
+    });
+
+    await this.equipmentRepo.remove(equipment);
+    return { message: 'Equipo eliminado correctamente' };
+  }
 }

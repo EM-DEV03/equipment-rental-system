@@ -130,11 +130,11 @@ export class SeedService implements OnModuleInit {
 
     await this.settingsRepo.save(
       this.settingsRepo.create({
-        businessName: 'Arley Rental',
+        businessName: 'RentalOps',
         taxId: '900123456',
         address: 'Bogota, Colombia',
         phone: '3201234567',
-        email: 'alquileres@arleyrental.local',
+        email: 'operaciones@rentalops.local',
         invoiceFooter: 'Gracias por confiar en nuestro servicio de alquiler.',
         defaultPrinterProfile: 'standard',
       }),

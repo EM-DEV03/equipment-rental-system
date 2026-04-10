@@ -66,7 +66,7 @@ function TicketContent() {
             profile === 'pos' ? (
               <>
                 <div className="mb-4 text-center">
-                  <h1 className="text-xl font-bold uppercase">Arley Rental</h1>
+                  <h1 className="text-xl font-bold uppercase">RentalOps</h1>
                   <p>Control de alquiler de equipos</p>
                   <p>========================</p>
                   <p className="text-lg font-bold">
@@ -130,7 +130,7 @@ function TicketContent() {
                 <div className="flex items-start justify-between border-b border-stone-300 pb-6">
                   <div>
                     <h1 className="text-3xl font-black uppercase text-slate-900">
-                      Arley Rental
+                      RentalOps
                     </h1>
                     <p className="mt-2 text-slate-600">
                       Sistema de alquiler de equipos de construccion

@@ -17,7 +17,7 @@ export class SettingsService {
     if (!settings) {
       settings = await this.settingsRepo.save(
         this.settingsRepo.create({
-          businessName: 'Arley Rental',
+          businessName: 'RentalOps',
         }),
       );
     }

@@ -108,6 +108,27 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(payload),
     }),
+  updateEquipment: (
+    id: string,
+    payload: Partial<{
+      name: string;
+      type: string;
+      totalQuantity: number;
+      availableQuantity: number;
+      maintenanceQuantity: number;
+      damagedQuantity: number;
+      dailyRate: number;
+      location: string;
+    }>,
+  ) =>
+    apiFetch<Equipment>(`/equipment/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(payload),
+    }),
+  deleteEquipment: (id: string) =>
+    apiFetch<{ message: string }>(`/equipment/${id}`, {
+      method: 'DELETE',
+    }),
   dashboard: () => apiFetch<DashboardSummary>('/dashboard/summary'),
   activeRentals: () => apiFetch<Rental[]>('/reports/active-rentals'),
   topEquipment: () =>

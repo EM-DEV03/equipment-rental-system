@@ -36,7 +36,7 @@ async function bootstrap() {
   app.use('/pdfs', require('express').static(join(process.cwd(), 'public', 'pdfs')));
 
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Arley Rental API')
+    .setTitle('RentalOps API')
     .setDescription('API del MVP para alquiler de equipos de construccion')
     .setVersion('1.0.0')
     .addBearerAuth()

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowLeftRight,
@@ -11,11 +12,17 @@ import {
   Users,
 } from 'lucide-react';
 import { AuthShell } from '@/components/auth-shell';
+import icono from '@/img/icono.png';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Equipos Construccion MVP',
-  description: 'Sistema simple y confiable para alquiler de equipos de construccion',
+  title: 'RentalOps',
+  description: 'Sistema profesional para alquiler de equipos, inventario y operaciones.',
+  icons: {
+    icon: icono.src,
+    shortcut: icono.src,
+    apple: icono.src,
+  },
 };
 
 const navigation = [
@@ -40,11 +47,18 @@ export default function RootLayout({
         <div className="min-h-screen md:grid md:grid-cols-[280px_1fr]">
           <aside className="border-b border-white/50 bg-slate-950 px-5 py-6 text-white md:min-h-screen md:border-b-0 md:border-r md:border-r-white/10">
             <div className="mb-8 flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-700 shadow-lg shadow-orange-900/40">
-                <Package className="h-6 w-6" />
+              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-amber-500 to-orange-700 shadow-lg shadow-orange-900/40">
+                <Image
+                  src={icono}
+                  alt="RentalOps"
+                  width={48}
+                  height={48}
+                  className="h-full w-full object-cover"
+                  priority
+                />
               </div>
               <div>
-                <p className="text-lg font-extrabold tracking-tight">Arley Rental</p>
+                <p className="text-lg font-extrabold tracking-tight">RentalOps</p>
                 <p className="text-sm text-slate-400">Operacion diaria sin friccion</p>
               </div>
             </div>

@@ -7,7 +7,7 @@ export class BusinessSettings {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ default: 'Arley Rental' })
+  @Column({ default: 'RentalOps' })
   businessName: string;
 
   @Column({ default: '900123456' })

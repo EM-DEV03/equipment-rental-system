@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Patch, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { EquipmentService } from './equipment.service';
 
 @Controller('equipment')
@@ -27,5 +27,10 @@ export class EquipmentController {
   @Patch(':id')
   update(@Param('id') id: string, @Body() body: Record<string, string | number>) {
     return this.equipmentService.update(id, body);
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: string) {
+    return this.equipmentService.delete(id);
   }
 }

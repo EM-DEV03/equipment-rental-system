@@ -19,7 +19,7 @@ export class HealthController {
         type: databaseType,
         connected: databaseConnected,
       },
-      app: 'Arley Rental API',
+      app: 'RentalOps API',
     };
   }
 }
