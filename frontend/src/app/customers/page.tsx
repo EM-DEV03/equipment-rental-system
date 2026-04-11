@@ -50,7 +50,13 @@ export default function CustomersPage() {
   useEffect(() => {
     if (selectedCustomer) {
       loadHistory(selectedCustomer.id);
-      setForm(selectedCustomer);
+      setForm({
+        fullName: selectedCustomer.fullName,
+        documentId: selectedCustomer.documentId,
+        phone: selectedCustomer.phone,
+        address: selectedCustomer.address,
+        notes: selectedCustomer.notes ?? '',
+      });
       setIsEditing(false);
     }
   }, [selectedCustomer]);
@@ -93,7 +99,13 @@ export default function CustomersPage() {
   function handleCancelEdit() {
     setIsEditing(false);
     if (selectedCustomer) {
-      setForm(selectedCustomer);
+      setForm({
+        fullName: selectedCustomer.fullName,
+        documentId: selectedCustomer.documentId,
+        phone: selectedCustomer.phone,
+        address: selectedCustomer.address,
+        notes: selectedCustomer.notes ?? '',
+      });
     }
   }
 
