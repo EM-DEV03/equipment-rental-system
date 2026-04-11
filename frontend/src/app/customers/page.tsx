@@ -214,7 +214,7 @@ export default function CustomersPage() {
               value={form.fullName}
               onChange={(event) => setForm((current) => ({ ...current, fullName: event.target.value }))}
               required
-              disabled={selectedCustomer && !isEditing}
+              disabled={selectedCustomer ? !isEditing : undefined}
             />
             <input
               className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
@@ -222,7 +222,7 @@ export default function CustomersPage() {
               value={form.documentId}
               onChange={(event) => setForm((current) => ({ ...current, documentId: event.target.value }))}
               required
-              disabled={selectedCustomer && !isEditing}
+              disabled={selectedCustomer ? !isEditing : undefined}
             />
             <input
               className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
@@ -230,7 +230,7 @@ export default function CustomersPage() {
               value={form.phone}
               onChange={(event) => setForm((current) => ({ ...current, phone: event.target.value }))}
               required
-              disabled={selectedCustomer && !isEditing}
+              disabled={selectedCustomer ? !isEditing : undefined}
             />
             <input
               className="rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
@@ -238,14 +238,14 @@ export default function CustomersPage() {
               value={form.address}
               onChange={(event) => setForm((current) => ({ ...current, address: event.target.value }))}
               required
-              disabled={selectedCustomer && !isEditing}
+              disabled={selectedCustomer ? !isEditing : undefined}
             />
             <textarea
               className="min-h-24 rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3"
               placeholder="Notas opcionales"
               value={form.notes}
               onChange={(event) => setForm((current) => ({ ...current, notes: event.target.value }))}
-              disabled={selectedCustomer && !isEditing}
+              disabled={selectedCustomer ? !isEditing : undefined}
             />
           </div>
 
