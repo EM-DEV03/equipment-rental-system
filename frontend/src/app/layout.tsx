@@ -11,6 +11,7 @@ import {
   SlidersHorizontal,
   Users,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/next';
 import { AuthShell } from '@/components/auth-shell';
 import icono from '@/img/icono.png';
 import './globals.css';
@@ -95,6 +96,7 @@ export default function RootLayout({
             </div>
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
