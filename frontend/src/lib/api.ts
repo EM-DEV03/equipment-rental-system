@@ -93,6 +93,20 @@ export const api = {
       method: 'POST',
       body: JSON.stringify(payload),
     }),
+  updateCustomer: (
+    id: string,
+    payload: Partial<{
+      fullName: string;
+      documentId: string;
+      phone: string;
+      address: string;
+      notes: string;
+    }>,
+  ) =>
+    apiFetch<Customer>(`/customers/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(payload),
+    }),
   customerHistory: (id: string) =>
     apiFetch<{ customer: Customer; rentals: Rental[] }>(`/customers/${id}/history`),
   equipment: (search?: string) =>

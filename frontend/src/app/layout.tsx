@@ -12,6 +12,7 @@ import {
   Users,
 } from 'lucide-react';
 import { AuthShell } from '@/components/auth-shell';
+import { LogoutButton } from '@/components/logout-button';
 import icono from '@/img/icono.png';
 import './globals.css';
 
@@ -87,6 +88,7 @@ export default function RootLayout({
               <p className="text-sm text-slate-200">Usuario: <strong>admin</strong></p>
               <p className="text-sm text-slate-200">Clave: <strong>Admin123*</strong></p>
             </div>
+            <LogoutButton />
           </aside>
 
           <main className="min-h-screen p-4 md:p-8">
